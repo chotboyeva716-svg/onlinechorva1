@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlineChorva.uz - O'zbekistondagi eng katta chorva bozori </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .chat-box {
+            height: calc(100vh - 150px);
+        }
+        @media (max-width: 768px) {
+            .chat-box {
+                height: calc(100vh - 200px);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-green-700 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-paw text-2xl"></i>
+                    <h1 class="text-xl font-bold">onlinechorva.uz</h1>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#" class="hover:text-green-200 font-medium">Asosiy</a>
+                    <a href="#" class="hover:text-green-200 font-medium">Kategoriyalar</a>
+                    <a href="#" class="hover:text-green-200 font-medium">Qidiruv</a>
+                    <a href="#" class="hover:text-green-200 font-medium">Mening akkountim</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button class="md:hidden text-xl">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="relative">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
+                    </div>
+                    <div class="hidden md:block">
+                        <button class="bg-white text-green-700 px-4 py-1 rounded-full font-medium hover:bg-green-100 transition">Reklama</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="md:hidden mt-3 hidden">
+                <div class="flex flex-col space-y-3">
+                    <a href="#" class="hover:text-green-200">Asosiy</a>
+                    <a href="#" class="hover:text-green-200">Kategoriyalar</a>
+                    <a href="#" class="hover:text-green-200">Qidiruv</a>
+                    <a href="#" class="hover:text-green-200">Mening akkountim</a>
+                    <button class="bg-white text-green-700 px-4 py-1 rounded-full font-medium hover:bg-green-100 transition w-full">Reklama</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-green-600 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h1 class="text-3xl md:text-4xl font-bold mb-4">O'zbekistonda o'z chorvangizni soting va sotib oling!</h1>
+                    <p class="text-lg mb-6">Firmangiz yoki biznesingiz uchun eng yaxshilarini toping. O'zbekiston bo'ylab barcha sotuvchilar bilan bog'laning.</p>
+                    <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                        <button class="bg-white text-green-700 px-6 py-2 rounded-full font-medium hover:bg-green-100 transition">hayvonlarni joylash</button>
+                        <button class="bg-transparent border-2 border-white px-6 py-2 rounded-full font-medium hover:bg-green-700 transition">chorvangizni biz bilan soting</button>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://images.unsplash.com/photo-1470114716159-e389f8712fda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Farm animals" class="rounded-lg shadow-xl max-w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="py-8 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold mb-4 text-gray-800">o'zingizga eng yaxshi hayvonni toping</h2>
+                <div class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-3">
+                    <select class="flex-grow p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                        <option value="">Barcha Kategoriyalar</option>
+                        <option value="cattle">Chorva mol</option>
+                        <option value="horses">Otlar</option>
+                        <option value="sheep">Qo'ylar</option>
+                        <option value="goats">Echkilar</option>
+                        <option value="camels">Tuyalar</option>
+                        <option value="poultry">Parrandalar</option>
+                    </select>
+                    <input type="text" placeholder="Search by animal, breed, location..." class="flex-grow p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <button class="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition">Qidiruv</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center text-gray-800">Kategoriya orqali joylang</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+                <!-- Cattle -->
+                <a href="#" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition transform hover:-translate-y-1">
+                    <div class="p-4 flex flex-col items-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-3">
+                            <i class="fas fa-cow text-green-600 text-2xl"></i>
+                        </div>
+                        <h3 class="font-medium text-gray-800">Cattle</h3>
+                        <p class="text-sm text-gray-500">Chorva mol</p>
+                    </div>
+                </a>
+                
+                <!-- Horses -->
+                <a href="#" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition transform hover:-translate-y-1">
+                    <div class="p-4 flex flex-col items-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-3">
+                            <i class="fas fa-horse text-green-600 text-2xl"></i>
+                        </div>
+                        <h3 class="font-medium text-gray-800">Horses</h3>
+                        <p class="text-sm text-gray-500">Otlar</p>
+                    </div>
+                </a>
+                
+                <!-- Sheep -->
+                <a href="#" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition transform hover:-translate-y-1">
+                    <div class="p-4 flex flex-col items-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-3">
+                            <i class="fas fa-sheep text-green-600 text-2xl"></i>
+                        </div>
+                        <h3 class="font-medium text-gray-800">Sheep</h3>
+                        <p class="text-sm text-gray-500">Qo'ylar</p>
+                    </div>
+                </a>
+                
+                <!-- Goats -->
+                <a href="#" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition transform hover:-translate-y-1">
+                    <div class="p-4 flex flex-col items-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-3">
+                            <i class="fas fa-goat text-green-600 text-2xl"></i>
+                        </div>
+                        <h3 class="font-medium text-gray-800">Goats</h3>
+                        <p class="text-sm text-gray-500">Echkilar</p>
+                    </div>
+                </a>
+                
+                <!-- Camels -->
+                <a href="#" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition transform hover:-translate-y-1">
+                    <div class="p-4 flex flex-col items-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-3">
+                            <i class="fas fa-camel text-green-600 text-2xl"></i>
+                        </div>
+                        <h3 class="font-medium text-gray-800">Camels</h3>
+                        <p class="text-sm text-gray-500">Tuyalar</p>
+                    </div>
+                </a>
+                
+                <!-- Poultry -->
+                <a href="#" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition transform hover:-translate-y-1">
+                    <div class="p-4 flex flex-col items-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-3">
+                            <i class="fas fa-kiwi-bird text-green-600 text-2xl"></i>
+                        </div>
+                        <h3 class="font-medium text-gray-800">Poultry</h3>
+                        <p class="text-sm text-gray-500">Parrandalar</p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Poultry Subcategories (hidden by default) -->
+            <div id="poultrySubcategories" class="hidden mt-8">
+                <h3 class="text-xl font-semibold mb-4 text-gray-700">Poultry Subcategories</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                    <a href="#" class="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-egg text-green-600"></i>
+                            </div>
+                            <span class="font-medium">Tovuqlar</span>
+                        </div>
+                    </a>
+                    <a href="#" class="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-feather text-green-600"></i>
+                            </div>
+                            <span class="font-medium">G'ozlar</span>
+                        </div>
+                    </a>
+                    <a href="#" class="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-duck text-green-600"></i>
+                            </div>
+                            <span class="font-medium">O'rdaklar</span>
+                        </div>
+                    </a>
+                    <a href="#" class="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-dove text-green-600"></i>
+                            </div>
+                            <span class="font-medium">Kurkalar</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Listings -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800">So'ngi ro'yxatlar</h2>
+                <a href="#" class="text-green-600 font-medium hover:underline">Barchasini ko'rish</a>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Listing 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition transform hover:-translate-y-1">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1558562411-3e38a756815e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Sheep" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-green-600 text-white text-sm font-medium px-2 py-1 rounded">
+                            Qo'y
+                        </div>
+                        <div class="absolute bottom-2 left-2 bg-white text-gray-800 font-bold px-3 py-1 rounded-lg shadow">
+                            1,200,000 UZS
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">Sog'lom Qo'y</h3>
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <i class="fas fa-map-marker-alt mr-1"></i>
+                            <span>Surxondaryo, Jarqo'rg'on</span>
+                        </div>
+                        <div class="text-sm text-gray-700 mb-4">
+                            <p><strong>Yosh:</strong> 2 Yosh</p>
+                            <p><strong>tug'ganlar soni:</strong> 1 marta</p>
+                            <p><strong>Tishlari:</strong> to'liq tish</p>
+                            <p><strong>Sog'ligi:</strong> Vaksina qilingan</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="text-green-600 hover:text-green-800">
+                                <i class="far fa-heart text-xl"></i>
+                            </button>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition flex items-center">
+                                <i class="fas fa-phone-alt mr-2"></i> Bog'lanish
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Listing 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition transform hover:-translate-y-1">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1559484101-9c6be5b712d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cow" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-green-600 text-white text-sm font-medium px-2 py-1 rounded">
+                            Chorva mol 
+                        </div>
+                        <div class="absolute bottom-2 left-2 bg-white text-gray-800 font-bold px-3 py-1 rounded-lg shadow">
+                            8,500,000 UZS
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">Ko'p sut beradigan sigir</h3>
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <i class="fas fa-map-marker-alt mr-1"></i>
+                            <span>Tashkent, Qibray</span>
+                        </div>
+                        <div class="text-sm text-gray-700 mb-4">
+                            <p><strong>Yosh:</strong> 4 Yosh</p>
+                            <p><strong>Tug'ishlar soni:</strong> 3 marta</p>
+                            <p><strong>sut:</strong> 25L/kun</p>
+                            <p><strong>Ovqati:</strong> Quruq hashak</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="text-green-600 hover:text-green-800">
+                                <i class="far fa-heart text-xl"></i>
+                            </button>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition flex items-center">
+                                <i class="fas fa-phone-alt mr-2"></i> Bog'lanish
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Listing 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition transform hover:-translate-y-1">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1553284965-e2818c3e1e9e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Horse" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-green-600 text-white text-sm font-medium px-2 py-1 rounded">
+                            Ot
+                        </div>
+                        <div class="absolute bottom-2 left-2 bg-white text-gray-800 font-bold px-3 py-1 rounded-lg shadow">
+                            15,000,000 UZS
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">Arabistonni toza naslli oti</h3>
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <i class="fas fa-map-marker-alt mr-1"></i>
+                            <span>Samarkand, Urgut</span>
+                        </div>
+                        <div class="text-sm text-gray-700 mb-4">
+                            <p><strong>Yosh:</strong> 5 Yosh</p>
+                            <p><strong>Bo'yi:</strong> 1.6m</p>
+                            <p><strong>Rangi:</strong> Qora</p>
+                            <p><strong>Shartnoma:</strong> Ro'yxatdan o'tkazilgan</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="text-green-600 hover:text-green-800">
+                                <i class="far fa-heart text-xl"></i>
+                            </button>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition flex items-center">
+                                <i class="fas fa-phone-alt mr-2"></i> Bog'lanish
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Listing 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition transform hover:-translate-y-1">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1556910639-91d8b6806f7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Chickens" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-green-600 text-white text-sm font-medium px-2 py-1 rounded">
+                            Parranda
+                        </div>
+                        <div class="absolute bottom-2 left-2 bg-white text-gray-800 font-bold px-3 py-1 rounded-lg shadow">
+                            120,000 UZS
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">Bruler jo'jasi (50ta bor)</h3>
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <i class="fas fa-map-marker-alt mr-1"></i>
+                            <span>Andijan, Asaka</span>
+                        </div>
+                        <div class="text-sm text-gray-700 mb-4">
+                            <p><strong>Yosh:</strong> 3 oylik</p>
+                            <p><strong>Vazni:</strong> har biri 2.5 kg</p>
+                            <p><strong>Vaksina qilingan:</strong> Ha</p>
+                            <p><strong>Har biri:</strong> 120,000 So'm</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="text-green-600 hover:text-green-800">
+                                <i class="far fa-heart text-xl"></i>
+                            </button>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition flex items-center">
+                                <i class="fas fa-phone-alt mr-2"></i> Bog'lanish
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center text-gray-800">How It Works</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-search text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">1. Joylang yoki qidiring</h3>
+                    <p class="text-gray-600">Kategoriyalashtirish yoki qidiruv orqali o'zingizga eng yaxshi hayvonni toping!.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-comments text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">2. Sotuvchiga bog'laning</h3>
+                    <p class="text-gray-600">Narxni kelishish maqsadida bizning chat sistemamiz orqali sotuvchiga yozing yoki bog'laning.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-handshake text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">3. Savdoni yakunlang</h3>
+                    <p class="text-gray-600">Savdo qilgan chorvangizni olib keting yoki olib borib beramiz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center text-gray-800">Bizning foydalanuvchilar nima deydi</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-green-200 flex items-center justify-center mr-4">
+                            <span class="text-green-700 font-bold">AB</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Abdulloh B.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Men o'zimning fermam uchun 10ta zo'r qo'ylardan sotib oldim onlinechorva.uz. Sotuvchi qo'ylarning holatini ochiq-oydin aytib berdi va biz yaxshi kelishdik. juda yaxshi xizmat!"</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-green-200 flex items-center justify-center mr-4">
+                            <span class="text-green-700 font-bold">NM</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Nilufar M.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Parrandalarning fermeri sifatida, Men bu platformada doimiy parrandalarni sotaman va kerak bo'lganda sotib olaman. Chat funksiyasi savoni osonlashtiradi, va men bir nechta sotuvchilar bilan tanishib ham oldim."</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-green-200 flex items-center justify-center mr-4">
+                            <span class="text-green-700 font-bold">SR</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Shavkat R.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Bir necha oylardan beri ot qidirayotgan edim. Onlinechorva.uz sayti menga o'zim xohlagan otni topib berdi. Savdo juda oson va zo'r bo'ldi."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Modal (hidden by default) -->
+    <div id="chatModal" class="fixed inset-0 z-50 hidden">
+        <div class="absolute bottom-0 right-0 w-full md:w-96 h-full md:h-5/6 bg-white shadow-xl rounded-t-lg flex flex-col">
+            <!-- Chat Header -->
+            <div class="bg-green-600 text-white p-4 rounded-t-lg flex justify-between items-center">
+                <h3 class="font-bold">Sotuvchi bilan suhbatlashing</h3>
+                <button id="closeChat" class="text-white hover:text-gray-200">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div> <!-- Post Ad Modal -->
+<div id="postAdModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex items-center justify-center">
+  <div class="bg-white rounded-lg shadow-lg w-full max-w-lg p-6">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-xl font-bold">Yangi E'lon Qo‘shish</h2>
+      <button id="closePostAd" class="text-gray-500 hover:text-gray-700">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <form>
+      <input type="text" placeholder="Hayvon nomi" class="w-full p-2 border mb-3 rounded" />
+      <input type="text" placeholder="Narxi (UZS)" class="w-full p-2 border mb-3 rounded" />
+      <textarea placeholder="Qo‘shimcha ma'lumotlar..." class="w-full p-2 border mb-3 rounded"></textarea>
+      <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">Yuborish</button>
+    </form>
+  </div>
+</div>
+
+            
+            <!-- Chat Messages -->
+            <div class="chat-box overflow-y-auto p-4 flex-grow bg-gray-50">
+                <div class="flex mb-4">
+                    <div class="w-10 h-10 rounded-full bg-green-200 flex items-center justify-center mr-3">
+                        <span class="text-green-700 font-bold">SK</span>
+                    </div>
+                    <div class="max-w-xs md:max-w-md bg-white p-3 rounded-lg shadow">
+                        <p>Salom! Qo'yni narxi qancha ekan juda qiziqdim?. siz bilan kelisha olamizmi?</p>
+                        <p class="text-xs text-gray-500 mt-1">10:30 AM</p>
+                    </div>
+                </div>
+                
+                <div class="flex mb-4 justify-end">
+                    <div class="max-w-xs md:max-w-md bg-green-100 p-3 rounded-lg shadow">
+                        <p>Ha, biz narxini kelisha olamiz. Sizga nechta kerak?</p>
+                        <p class="text-xs text-gray-500 mt-1 text-right">10:32 AM</p>
+                    </div>
+                    <div class="w-10 h-10 rounded-full bg-blue-200 flex items-center justify-center ml-3">
+                        <span class="text-blue-700 font-bold">Men</span>
+                    </div>
+                </div>
+                
+                <div class="flex mb-4">
+                    <div class="w-10 h-10 rounded-full bg-green-200 flex items-center justify-center mr-3">
+                        <span class="text-green-700 font-bold">SK</span>
+                    </div>
+                    <div class="max-w-xs md:max-w-md bg-white p-3 rounded-lg shadow">
+                        <p>Menga 5tacha qo'y kerak. Har birini 1,100,000 dan berasizmi?</p>
+                        <p class="text-xs text-gray-500 mt-1">10:35 AM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Chat Input -->
+            <div class="p-4 border-t border-gray-200">
+                <div class="flex">
+                    <input type="text" placeholder="Type your message..." class="flex-grow p-3 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-1 focus:ring-green-500">
+                    <button class="bg-green-600 text-white px-4 rounded-r-lg hover:bg-green-700 transition">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal (hidden by default) -->
+    <div id="loginModal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black bg-opacity-50">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-md">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800">Xush kelibsiz!</h3>
+                    <button id="closeLogin" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <form>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 mb-2">Telefon raqam yoki email</label>
+                        <input type="text" id="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-green-500">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="password" class="block text-gray-700 mb-2">Parol</label>
+                        <input type="password" id="password" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-green-500">
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-lg font-medium hover:bg-green-700 transition mb-4">
+                        Log In
+                    </button>
+                    
+                    <div class="text-center mb-4">
+                        <a href="#" class="text-green-600 hover:underline">Parolni unutdingizmi?</a>
+                    </div>
+                    
+                    <div class="flex items-center mb-6">
+                        <div class="flex-grow border-t border-gray-300"></div>
+                        <span class="px-4 text-gray-500">yoki</span>
+                        <div class="flex-grow border-t border-gray-300"></div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <button class="flex items-center justify-center p-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition">
+                            <i class="fab fa-google text-red-500 mr-2"></i>
+                            <span>Google</span>
+                        </button>
+                        <button class="flex items-center justify-center p-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition">
+                            <i class="fas fa-phone text-blue-500 mr-2"></i>
+                            <span>Telefon raqam</span>
+                        </button>
+                    </div>
+                    
+                    <div class="text-center">
+                        <p class="text-gray-600">Akkountingiz yo'qmi? <a href="#" class="text-green-600 hover:underline">Ro'yxatdan o'ting</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-paw mr-2"></i> onlinechorva.uz
+                    </h3>
+                    <p class="text-gray-400">O'zbekistonning asosiy chorva bozori. Bu bozor mamlakat bo'ylab hamma sotuvchilarni birlashtiradi.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Tezkor havolalar</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Asosiy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Ro'yxatlar</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Kategoriyalar</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Qanday ishlaydi</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">akkountim</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Kirish</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Ro'yxatdan o'tish</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Mening ro'yxatlarim</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Xabarlar</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Biz bilan bog'laning</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-map-marker-alt mr-2"></i> Surkhandarya, Uzbekistan
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-phone mr-2"></i> +998 95 433 74 04
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-envelope mr-2"></i> info@onlinechorva.uz
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 onlinechorva.uz. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle mobile menu
+        document.querySelector('.fa-bars').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.toggle('hidden');
+        });
+// Post Ad modalni ochish
+document.querySelectorAll('button').forEach(btn => {
+  if (btn.textContent.includes("Post Ad")) {
+    btn.addEventListener("click", () => {
+      document.getElementById("postAdModal").classList.remove("hidden");
+    });
+  }
+});
+
+// Post Ad modalni yopish
+document.getElementById("closePostAd").addEventListener("click", () => {
+  document.getElementById("postAdModal").classList.add("hidden");
+});
+
+        // Toggle chat modal
+        document.querySelectorAll('.fa-phone-alt').forEach(button => {
+            button.addEventListener('click', function() {
+                document.getElementById('chatModal').classList.remove('hidden');
+            });
+        });
+
+        // Close chat modal
+        document.getElementById('closeChat').addEventListener('click', function() {
+            document.getElementById('chatModal').classList.add('hidden');
+        });
+
+        // Toggle login modal (for demo purposes)
+        document.querySelectorAll('.fa-user').forEach(button => {
+            button.addEventListener('click', function() {
+                document.getElementById('loginModal').classList.remove('hidden');
+            });
+        });
+
+        // Close login modal
+        document.getElementById('closeLogin').addEventListener('click', function() {
+            document.getElementById('loginModal').classList.add('hidden');
+        });
+
+        // Show poultry subcategories
+        document.querySelectorAll('[href="#poultrySubcategories"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.getElementById('poultrySubcategories').classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
